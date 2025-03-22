@@ -11,9 +11,9 @@ import Contact from './Pages/Contact';
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-neutral-900">
+      <div className="w-100%">
         <NavBar />
-        <div className="container mx-auto pt-24">
+        <div className="container">
           <Routes>
             <Route path="/" element={<AboutUs />} />
             <Route path="/about-us" element={<AboutUs />} />
