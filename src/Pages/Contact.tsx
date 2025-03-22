@@ -38,10 +38,10 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="w-[500px]">
-          <div className="text-[140px] text-white  font-[600] leading-none">
+          <div className="text-[140px] text-white font-[600] leading-none">
             DROP
           </div>
-          <div className="text-[140px] text-white  font-[600] leading-none text-right">
+          <div className="text-[140px] text-white font-[600] leading-none text-right">
             A LINE
           </div>
         </div>

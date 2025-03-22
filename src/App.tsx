@@ -12,7 +12,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="w-100%">
-        <NavBar />
+        <NavBar/>
         <div className="container">
           <Routes>
             <Route path="/" element={<AboutUs />} />
