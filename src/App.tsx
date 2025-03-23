@@ -7,6 +7,7 @@ import FlagshipEvent from './Pages/FlagshipEvent';
 import Team from './Pages/Team';
 import Portfolio from './Pages/Portfolio';
 import Contact from './Pages/Contact';
+import Home from './Pages/Home';
 
 const App: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const App: React.FC = () => {
         <NavBar/>
         <div className="container">
           <Routes>
-            <Route path="/" element={<AboutUs />} />
+            <Route path="/" element={<Home/>} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/events" element={<Events />} />
             <Route path="/flagship-event" element={<FlagshipEvent />} />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import RotatingCircle from '../Components/Circle';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -49,31 +50,8 @@ const Contact: React.FC = () => {
 
 
       <div className="w-1/2 flex flex-col justify-between">
-        <div>
-          <div className="flex flex-col gap-10 items-end">
-            <div className="relative w-24 h-24 flex items-center justify-center">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <path
-                  id="circlePath"
-                  d="M50,15 a35,35 0 1,1 -0.1,0"
-                  fill="none"
-                  stroke="none"
-                />
-                <text className="text-xs fill-white">
-                  <textPath href="#circlePath" startOffset="0%" className="tracking-widest uppercase">
-                    GET IN TOUCH - GET IN TOUCH -
-                  </textPath>
-                </text>
-              </svg>
-
-              <div className="absolute flex">
-                <div className="w-3 h-3 rounded-full bg-white mr-1"></div>
-                <div className="w-3 h-3 rounded-full bg-white ml-1"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <RotatingCircle/>
+        
         <div>
           <form onSubmit={handleSubmit}>
             <div className="mb-6">

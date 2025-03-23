@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
     return (
         <>
             <div className="w-full h-10 absolute bg-neutral-700/10 border border-neutral-700/20 backdrop-blur-lg  items-center" >
-                <div className=" w-full h-10 justify-between px-10 items-center absolute flex flex-row items-center">
+                <div className=" w-full h-10 justify-between px-10 items-center absolute flex flex-row ">
                     <div className='flex flex-row gap-30'>
                         <Link to="/about-us" className={`${isActive('/about-us')} text-36px font-light font-kumbh hover:text-white transition-colors`}>
                             ABOUT US
