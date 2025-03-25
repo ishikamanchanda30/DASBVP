@@ -21,14 +21,14 @@ const RotatingCircle = () => {
       <div>
         <div className="flex flex-col gap-10 items-end">
           <div className="relative w-24 h-24 flex items-center justify-center">
-            {/* Apply the animation style to the SVG */}
+             
             <svg
               viewBox="0 0 100 100"
               className="w-full h-full"
               style={spinAnimation}
             >
               <defs>
-                <style>{keyframes}</style> {/* Inject the keyframes */}
+                <style>{keyframes}</style>
               </defs>
               <path
                 id="circlePath"
@@ -47,7 +47,6 @@ const RotatingCircle = () => {
               </text>
             </svg>
 
-            {/* Static dots */}
             <div className="absolute flex">
               <div className="w-3 h-3 rounded-full bg-white mr-1"></div>
               <div className="w-3 h-3 rounded-full bg-white ml-1"></div>

@@ -14,7 +14,7 @@ const App: React.FC = () => {
     <Router>
       <div className="w-100%">
         <NavBar/>
-        <div className="container">
+        <div className="container scroll-smooth">
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/about-us" element={<AboutUs />} />
