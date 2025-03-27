@@ -14,9 +14,9 @@ import Team from './Pages/Team';
 // Main Layout with Footer
 const MainLayout: React.FC = () => {
   return (
-    <div className="w-100%">
+    <div className="w-screen">
       <NavBar />
-      <div className="container scroll-smooth">
+      <div className="container scroll-smooth w-screen">
         <Outlet />
       </div>
       <Footer />
@@ -27,9 +27,9 @@ const MainLayout: React.FC = () => {
 // Layout without Footer (for Cookies page)
 const NoFooterLayout: React.FC = () => {
   return (
-    <div className="w-100%">
+    <div className="w-screen">
       <NavBar />
-      <div className="container scroll-smooth">
+      <div className="container scroll-smooth w-screen">
         <Outlet />
       </div>
     </div>
