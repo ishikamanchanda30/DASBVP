@@ -25,8 +25,8 @@ const FlagshipEvent: React.FC = () => {
           <div
             key={index}
             className="h-[90%] border rounded-xl flex flex-col justify-evenly items-center 
-                      transition-all duration-300 flex-1 hover:flex-[1.4]"
-          /* flex-1 = equal width, hover:flex-[1.2] = grows 20% larger */
+                      transition-all duration-300 flex-1 hover:flex-[1.4]" 
+            /* flex-1 = equal width, hover:flex-[1.2] = grows 20% larger */
           >
             <div className="w-[90%] h-[10%] flex justify-between items-center">
               <div className="h-full aspect-square bg-white rounded-full" />
