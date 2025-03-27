@@ -52,7 +52,7 @@ const Events: React.FC = () => {
   );
 
   return (
-    <div className="w-screen h-screen bg-black text-white flex flex-col justify-start items-center py-20 px-12 font-kumbh">
+    <div className="w-screen h-screen bg-[#0D0D0D] text-white flex flex-col justify-start items-center py-20 px-12 font-kumbh">
       {/* Year Range */}
       <div className="text-left w-full max-w-5xl mb-10"> {/* Increased mb */}
         <p className="text-4xl font-bold">{events[0].yearRange}</p>
