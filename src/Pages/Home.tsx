@@ -24,7 +24,6 @@ function Home() {
       </div>
 
       {/* Stacked CLASS Text */}
-      
 
       {/* Since 2017 Text */}
       <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 text-center text-sm text-gray-400">
