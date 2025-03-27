@@ -14,15 +14,15 @@ function Footer() {
             </div>
           </div>
           <div className='flex flex-row justify-between gap-4 cursor-pointer '>
-            <div className='border-r-2 border-white pr-4'>
+            <a href="/contact" className='border-r-2 border-white pr-4'>
               Contact Us
-            </div>
-            <div className='border-r-2 border-white pr-4'>
+            </a>
+            <a href="/cookies" className='border-r-2 border-white pr-4'>
               Cookie Policy
-            </div>
-            <div>
+            </a>
+            <a href="/" >
               Privacy Policy
-            </div>
+            </a>
           </div>
         </div>
       </div>
