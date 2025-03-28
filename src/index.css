@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @tailwind utilities;
+
+.vertical-text{
+    writing-mode:vertical-rl;
+}
