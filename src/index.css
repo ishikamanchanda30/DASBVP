@@ -1,9 +1,14 @@
 @import "tailwindcss";
 @tailwind utilities;
 
-.vertical-text{
-    writing-mode:vertical-rl;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.prev:hover,.next:hover{
-    opacity: 100%;
+
+body{
+  overflow-x: hidden;
+
 }

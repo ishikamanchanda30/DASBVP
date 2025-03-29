@@ -15,7 +15,7 @@ const Faculty: React.FC = () => {
             name: "DR. ARVIND REHALIA",
             description: "Lorem ipsum dolor sit amet consectetur. Enim est sit gravida tempus urna ut mi eget sagittis. Posuere enim velit vel a molestie eu penatibus sed blandit. Magna mi dui vulputate pellentesque hendrerit elit.",
             role: "DAS MEMBER",
-            imageUrl: faculty 
+            imageUrl: faculty
         },
         {
             name: "DR. ARVIND REHALIA",
@@ -39,7 +39,7 @@ const Faculty: React.FC = () => {
 
             <div className="h-full mx-auto px-4 py-12 relative grid grid-cols-1 md:grid-cols-3">
                 <div className=" flex flex-col p-5 justify-between">
-            
+
                     <div className="space-y-8">
                         <h1 className="text-5xl font-kumbh">
                             {facultyMembers[currentIndex].name}
@@ -50,7 +50,6 @@ const Faculty: React.FC = () => {
                         </p>
                     </div>
                     <div>
-                  
                         <div className="flex gap-4 mt-8">
                             <button
                                 onClick={handlePrevious}
@@ -75,20 +74,17 @@ const Faculty: React.FC = () => {
                     </div>
                 </div>
                 <div className='p-5 flex justify-center items-center'>
-               
-                    <div className="relative flex ">
-                        <div className="relative w-70 transform rotate-6 overflow-hidden rounded-lg aspect-square ">
-                            <img
-                                src={facultyMembers[currentIndex].imageUrl}
-                                alt={facultyMembers[currentIndex].name}
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
+                    <div className="w-70 md:w-100 rotate-6 overflow-hidden rounded-lg aspect-square shadow-[#ffffff]/10 shadow-2xl">
+                        <img
+                            src={facultyMembers[currentIndex].imageUrl}
+                            alt={facultyMembers[currentIndex].name}
+                            className="w-full h-full object-cover"
+                        />
                     </div>
                 </div>
-         
-                <div className="relative">
-                    <div className="absolute bottom-5 right-5 text-6xl md:text-8xl font-[600] text-white p-4">
+
+                <div className="flex justify-end place-items-end bottom-0 ">
+                    <div className="text-6xl md:text-8xl font-[600] text-white p-4">
                         FACULTY<br />INCHARGE
                     </div>
                 </div>
