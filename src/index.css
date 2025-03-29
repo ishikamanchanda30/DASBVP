@@ -4,3 +4,6 @@
 .vertical-text{
     writing-mode:vertical-rl;
 }
+.prev:hover,.next:hover{
+    opacity: 100%;
+}
