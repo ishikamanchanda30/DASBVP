@@ -2,23 +2,23 @@ import React, { useState } from "react";
 
 const Events: React.FC = () => {
   const events = [
-    { id: 1, yearRange: "2023-2024", title: "ART EXHIBITION", description: "Yet another event" },
-    { id: 2, yearRange: "2023-2024", title: "MUSIC CONCERT", description: "Another event" },
-    { id: 3, yearRange: "2023-2024", title: "DANCE PERFORMANCE", description: "A dance event" },
-    { id: 4, yearRange: "2023-2024", title: "FILM SCREENING", description: "Another film event" },
+    { id: 1, yearRange: "2023-2024", title: "PHOTOWALK", description: "Yet another event", image: "src/assets/photowalk.jpg" },
+    { id: 2, yearRange: "2023-2024", title: "MUSIC CONCERT", description: "Another event", image: "src/assets/musicconcert.jpg" },
+    { id: 3, yearRange: "2023-2024", title: "DANCE PERFORMANCE", description: "A dance event", image: "src/assets/danceperformance.jpg" },
+    { id: 4, yearRange: "2023-2024", title: "FILM SCREENING", description: "Another film event", image: "src/assets/films.jpg" },
+    { id: 5, yearRange: "2023-2024", title: "FILM SCREENING", description: "Another film event", image: "src/assets/films.jpg" },
   ];
 
-  const slidesPerPage = 2;
+  const slidesPerPage = 4;
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, Math.ceil(events.length / slidesPerPage) - 1));
-  };
-
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    setCurrentIndex((prev) => (prev === 0 ? events.length - slidesPerPage : prev - 1));
   };
 
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === events.length - slidesPerPage ? 0 : prev + 1));
+  };
   const visibleEvents = events.slice(currentIndex * slidesPerPage, (currentIndex + 1) * slidesPerPage);
 
   return (
@@ -31,20 +31,19 @@ const Events: React.FC = () => {
       {/* Carousel Wrapper - Full Width */}
       <div className="w-[95%] flex-grow flex flex-col h-[70%] justify-around items-center">
         {/* Event Carousel - Full Width */}
-        <div className="w-full flex justify-between gap-2 items-center h-[10px] rounded">
+        <div className="w-full flex justify-between gap-2 items-center h-[10px] rounded bg-red-500">
           {events.map((_, index) => {
             const isSelected = index >= currentIndex * slidesPerPage && index < (currentIndex + 1) * slidesPerPage;
-            
+
             return (
               <div
                 key={index}
-                className={`h-full flex-1 flex items-center justify-center ${
-                  isSelected ? "bg-white" : "bg-[#232733]"
-                }`}
+                className={`h-full flex-1 flex items-center justify-center ${isSelected ? "bg-white" : "bg-[#232733]"
+                  }`}
               ></div>
             );
           })}
-        </div>  
+        </div>
         <div className="flex-grow w-full flex justify-between gap-2 items-center">
           {visibleEvents.map((event) => (
             <div key={event.id} className="flex-1 flex items-center justify-center bg-[#232733] h-[60%]">
@@ -54,13 +53,9 @@ const Events: React.FC = () => {
             </div>
           ))}
         </div>
-
-        {/* Event Description & Buttons */}
         <div className="w-full flex justify-between items-center">
-          {/* Event Details */}
-
           <button
-            className="rounded-full w-12 h-12 flex items-center justify-center text-white"
+            className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center text-white"
             onClick={handlePrev}
             aria-label="Previous"
           >
@@ -74,9 +69,9 @@ const Events: React.FC = () => {
             <span className="text-4xl ">{events[currentIndex * slidesPerPage]?.title || " "}</span>
             <span className="text-lg text-gray-400 font-light">{events[currentIndex * slidesPerPage]?.description || " "}</span>
           </div>
-                      
+
           <button
-            className="rounded-full w-12 h-12 flex items-center justify-center text-white"
+            className=" bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center text-white"
             onClick={handleNext}
             aria-label="Next"
           >
@@ -84,7 +79,7 @@ const Events: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
             </svg>
           </button>
-          
+
         </div>
       </div>
     </div>
