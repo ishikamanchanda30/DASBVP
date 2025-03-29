@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @tailwind utilities;
 
+
 *,
 *::before,
 *::after {
@@ -9,4 +10,5 @@
 
 body{
   overflow-x: hidden;
+
 }

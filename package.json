@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@builder.io/react": "^8.0.10",
+    "@gsap/react": "^2.1.2",
     "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/postcss": "^4.0.15",
     "@tailwindcss/vite": "^4.0.15",
+    "gsap": "^3.12.7",
     "motion": "^12.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
