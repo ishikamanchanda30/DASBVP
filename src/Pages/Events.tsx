@@ -1,12 +1,31 @@
 import React, { useState } from "react";
 
 const Events: React.FC = () => {
+  const titles = ["ART EXHIBITION", "MUSIC CONCERT", "DANCE PERFORMANCE", "FILM SCREENING"];
+
+  // PLEASE ADD 4 IMAGES IN EVERY EVENT
+
+
   const events = [
-    { id: 1, yearRange: "2023-2024", title: "PHOTOWALK", description: "Yet another event", image: "src/assets/photowalk.jpg" },
-    { id: 2, yearRange: "2023-2024", title: "MUSIC CONCERT", description: "Another event", image: "src/assets/musicconcert.jpg" },
-    { id: 3, yearRange: "2023-2024", title: "DANCE PERFORMANCE", description: "A dance event", image: "src/assets/danceperformance.jpg" },
-    { id: 4, yearRange: "2023-2024", title: "FILM SCREENING", description: "Another film event", image: "src/assets/films.jpg" },
-    { id: 5, yearRange: "2023-2024", title: "FILM SCREENING", description: "Another film event", image: "src/assets/films.jpg" },
+    { id: 1, yearRange: "2023-2024", title: titles[0], description: "Yet another event" },
+    { id: 2, yearRange: "2023-2024", title: titles[0], description: "Yet another event" },
+    { id: 3, yearRange: "2023-2024", title: titles[0], description: "Yet another event" },
+    { id: 4, yearRange: "2023-2024", title: titles[0], description: "Yet another event" },
+
+    { id: 5, yearRange: "2023-2024", title: titles[1], description: "Another event" },
+    { id: 6, yearRange: "2023-2024", title: titles[1], description: "Another event" },
+    { id: 7, yearRange: "2023-2024", title: titles[1], description: "Another event" },
+    { id: 8, yearRange: "2023-2024", title: titles[1], description: "Another event" },
+
+    { id: 9, yearRange: "2023-2024", title: titles[2], description: "A dance event" },
+    { id: 10, yearRange: "2023-2024", title: titles[2], description: "A dance event" },
+    { id: 11, yearRange: "2023-2024", title: titles[2], description: "A dance event" },
+    { id: 12, yearRange: "2023-2024", title: titles[2], description: "A dance event" },
+
+    { id: 13, yearRange: "2023-2024", title: titles[3], description: "Another film event" },
+    { id: 14, yearRange: "2023-2024", title: titles[3], description: "Another film event" },
+    { id: 15, yearRange: "2023-2024", title: titles[3], description: "Another film event" },
+    { id: 16, yearRange: "2023-2024", title: titles[3], description: "Another film event" },
   ];
 
   const slidesPerPage = 4;
@@ -29,12 +48,12 @@ const Events: React.FC = () => {
       </div>
 
       {/* Carousel Wrapper - Full Width */}
-      <div className="w-[95%] flex-grow flex flex-col h-[70%] justify-around items-center">
+      <div className="w-[95%] flex flex-col h-[70%] justify-evenly items-center">
         {/* Event Carousel - Full Width */}
-        <div className="w-full flex justify-between gap-2 items-center h-[10px] rounded bg-red-500">
-          {events.map((_, index) => {
-            const isSelected = index >= currentIndex * slidesPerPage && index < (currentIndex + 1) * slidesPerPage;
-
+        <div className="w-full flex justify-between gap-2 items-center h-[1%] rounded">
+          {titles.map((title, index) => {
+            const isSelected = visibleEvents.some(event => event.title === title);
+            
             return (
               <div
                 key={index}
@@ -43,17 +62,21 @@ const Events: React.FC = () => {
               ></div>
             );
           })}
-        </div>
-        <div className="flex-grow w-full flex justify-between gap-2 items-center">
+        </div>  
+        <div className="w-full flex justify-between gap-2 items-center h-[65%]">
           {visibleEvents.map((event) => (
-            <div key={event.id} className="flex-1 flex items-center justify-center bg-[#232733] h-[60%]">
+            <div key={event.id} className="flex-1 flex items-center justify-center bg-[#232733] h-[90%]">
               <div className="flex items-center justify-center rounded-md w-full ">
                 <span className="text-3xl font-bold text-center">{event.title}</span>
               </div>
             </div>
           ))}
         </div>
-        <div className="w-full flex justify-between items-center">
+
+        {/* Event Description & Buttons */}
+        <div className="w-full flex justify-between items-center h-[10%]">
+          {/* Event Details */}
+
           <button
             className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center text-white"
             onClick={handlePrev}
