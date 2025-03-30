@@ -65,7 +65,7 @@ const Events: React.FC = () => {
             );
           })}
         </div>  
-        <div className="w-full flex justify-between gap-2 items-center h-[65%]">
+        <div className="w-full flex justify-between gap-6 items-center h-[65%]">
           {visibleEvents.map((event) => (
             <div key={event.id} className="flex-1 flex items-center justify-center border rounded-xl h-[90%]">
               <div className="flex items-center justify-center rounded-md w-full ">
