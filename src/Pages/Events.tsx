@@ -2,43 +2,45 @@ import React, { useState } from "react";
 
 const Events: React.FC = () => {
   const titles = ["ART EXHIBITION", "MUSIC CONCERT", "DANCE PERFORMANCE", "FILM SCREENING"];
-
-  // PLEASE ADD 4 IMAGES IN EVERY EVENT
-
-
+// PLEASE ADD 4 IMAGES IN EVERY EVENT
   const events = [
-    { id: 1, yearRange: "2023-2024", title: titles[0], description: "Yet another event" },
-    { id: 2, yearRange: "2023-2024", title: titles[0], description: "Yet another event" },
-    { id: 3, yearRange: "2023-2024", title: titles[0], description: "Yet another event" },
-    { id: 4, yearRange: "2023-2024", title: titles[0], description: "Yet another event" },
+    { id: 1, yearRange: "2023-2024", title: titles[0], description: "Contemporary art showcase" },
+    { id: 2, yearRange: "2023-2024", title: titles[0], description: "Modern art exhibition" },
+    { id: 3, yearRange: "2023-2024", title: titles[0], description: "Abstract art collection" },
+    { id: 4, yearRange: "2023-2024", title: titles[0], description: "Digital art display" },
 
-    { id: 5, yearRange: "2023-2024", title: titles[1], description: "Another event" },
-    { id: 6, yearRange: "2023-2024", title: titles[1], description: "Another event" },
-    { id: 7, yearRange: "2023-2024", title: titles[1], description: "Another event" },
-    { id: 8, yearRange: "2023-2024", title: titles[1], description: "Another event" },
+    { id: 5, yearRange: "2023-2024", title: titles[1], description: "Jazz night performance" },
+    { id: 6, yearRange: "2023-2024", title: titles[1], description: "Classical symphony" },
+    { id: 7, yearRange: "2023-2024", title: titles[1], description: "Rock festival" },
+    { id: 8, yearRange: "2023-2024", title: titles[1], description: "Electronic music night" },
 
-    { id: 9, yearRange: "2023-2024", title: titles[2], description: "A dance event" },
-    { id: 10, yearRange: "2023-2024", title: titles[2], description: "A dance event" },
-    { id: 11, yearRange: "2023-2024", title: titles[2], description: "A dance event" },
-    { id: 12, yearRange: "2023-2024", title: titles[2], description: "A dance event" },
+    { id: 9, yearRange: "2023-2024", title: titles[2], description: "Contemporary dance" },
+    { id: 10, yearRange: "2023-2024", title: titles[2], description: "Ballet performance" },
+    { id: 11, yearRange: "2023-2024", title: titles[2], description: "Hip-hop showcase" },
+    { id: 12, yearRange: "2023-2024", title: titles[2], description: "Traditional folk dance" },
 
-    { id: 13, yearRange: "2023-2024", title: titles[3], description: "Another film event" },
-    { id: 14, yearRange: "2023-2024", title: titles[3], description: "Another film event" },
-    { id: 15, yearRange: "2023-2024", title: titles[3], description: "Another film event" },
-    { id: 16, yearRange: "2023-2024", title: titles[3], description: "Another film event" },
+    { id: 13, yearRange: "2023-2024", title: titles[3], description: "Independent films" },
+    { id: 14, yearRange: "2023-2024", title: titles[3], description: "Documentary screening" },
+    { id: 15, yearRange: "2023-2024", title: titles[3], description: "Short film festival" },
+    { id: 16, yearRange: "2023-2024", title: titles[3], description: "Classic cinema night" },
   ];
 
   const slidesPerPage = 4;
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
+  const totalPages = Math.ceil(events.length / slidesPerPage);
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? events.length - slidesPerPage : prev - 1));
+    setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === events.length - slidesPerPage ? 0 : prev + 1));
+    setCurrentPage((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
   };
-  const visibleEvents = events.slice(currentIndex * slidesPerPage, (currentIndex + 1) * slidesPerPage);
+
+  const startIndex = currentPage * slidesPerPage;
+  const endIndex = startIndex + slidesPerPage;
+  const visibleEvents = events.slice(startIndex, endIndex);
+  const currentEventGroup = visibleEvents[0]?.title || "";
 
   return (
     <div className="w-screen h-screen bg-[#0D0D0D] text-white flex flex-col font-kumbh items-center justify-center">
@@ -52,7 +54,7 @@ const Events: React.FC = () => {
         {/* Event Carousel - Full Width */}
         <div className="w-full flex justify-between gap-2 items-center h-[1%] rounded">
           {titles.map((title, index) => {
-            const isSelected = visibleEvents.some(event => event.title === title);
+            const isSelected = currentEventGroup === title;
             
             return (
               <div
@@ -65,7 +67,7 @@ const Events: React.FC = () => {
         </div>  
         <div className="w-full flex justify-between gap-2 items-center h-[65%]">
           {visibleEvents.map((event) => (
-            <div key={event.id} className="flex-1 flex items-center justify-center bg-[#232733] h-[90%]">
+            <div key={event.id} className="flex-1 flex items-center justify-center border rounded-xl h-[90%]">
               <div className="flex items-center justify-center rounded-md w-full ">
                 <span className="text-3xl font-bold text-center">{event.title}</span>
               </div>
@@ -75,8 +77,6 @@ const Events: React.FC = () => {
 
         {/* Event Description & Buttons */}
         <div className="w-full flex justify-between items-center h-[10%]">
-          {/* Event Details */}
-
           <button
             className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center text-white"
             onClick={handlePrev}
@@ -87,14 +87,15 @@ const Events: React.FC = () => {
             </svg>
           </button>
 
-
           <div className="flex flex-col justify-center items-center">
-            <span className="text-4xl ">{events[currentIndex * slidesPerPage]?.title || " "}</span>
-            <span className="text-lg text-gray-400 font-light">{events[currentIndex * slidesPerPage]?.description || " "}</span>
+            <span className="text-4xl ">{currentEventGroup}</span>
+            <span className="text-lg text-gray-400 font-light">
+              {visibleEvents.length > 0 ? visibleEvents[0].description : ""}
+            </span>
           </div>
 
           <button
-            className=" bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center text-white"
+            className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center text-white"
             onClick={handleNext}
             aria-label="Next"
           >
@@ -102,7 +103,6 @@ const Events: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
         </div>
       </div>
     </div>
