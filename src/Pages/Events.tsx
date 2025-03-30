@@ -1,28 +1,42 @@
 import React, { useState } from "react";
-
+import sunderNursery from "../assets/Events/sunderNursery.jpg"
+import delhiHaat from "../assets/Events/delhiHaat.jpg"
+import humayun from "../assets/Events/humayun.jpg"
+import dComp from "../assets/Events/dComp.jpg"
+import dDazz from "../assets/Events/dDazzle.jpg"
+import jeopardy from "../assets/Events/jeopardy.jpg"
+import movieScreen from "../assets/Events/movieScreen.jpg"
+import figma from "../assets/Events/figma.jpg"
+import canva from "../assets/Events/canva.jpg"
+import lodhi from "../assets/Events/lodhi.jpg"
+import F2F from "../assets/Events/2F2F.jpg"
+import fineArt from "../assets/Events/fineArt.jpg"
+import captureCampus from "../assets/Events/captureCampus.jpg"
+import movie from "../assets/Events/movie.jpg"
+import photoshop from "../assets/Events/photoshop.jpg"
+import dDesign from "../assets/Events/dDesign.png"
 const Events: React.FC = () => {
-  const titles = ["ART EXHIBITION", "MUSIC CONCERT", "DANCE PERFORMANCE", "FILM SCREENING"];
-// PLEASE ADD 4 IMAGES IN EVERY EVENT
+  const titles = ["PHOTOWALKS", "MAJOR EVENTS", "WORKSHOPS", "OTHERS"];
   const events = [
-    { id: 1, yearRange: "2023-2024", title: titles[0], description: "Contemporary art showcase" },
-    { id: 2, yearRange: "2023-2024", title: titles[0], description: "Modern art exhibition" },
-    { id: 3, yearRange: "2023-2024", title: titles[0], description: "Abstract art collection" },
-    { id: 4, yearRange: "2023-2024", title: titles[0], description: "Digital art display" },
+    { id: 1, yearRange: "2023-2024", title: titles[0], description: "LODHI GARDEN", image: lodhi },
+    { id: 2, yearRange: "2023-2024", title: titles[0], description: "SUNDER NURSERY", image: sunderNursery },
+    { id: 3, yearRange: "2023-2024", title: titles[0], description: "HUMAYUN'S TOMB", image: humayun },
+    { id: 4, yearRange: "2023-2024", title: titles[0], description: "DELHI HAAT", image: delhiHaat },
 
-    { id: 5, yearRange: "2023-2024", title: titles[1], description: "Jazz night performance" },
-    { id: 6, yearRange: "2023-2024", title: titles[1], description: "Classical symphony" },
-    { id: 7, yearRange: "2023-2024", title: titles[1], description: "Rock festival" },
-    { id: 8, yearRange: "2023-2024", title: titles[1], description: "Electronic music night" },
+    { id: 5, yearRange: "2023-2024", title: titles[1], description: "DESIGN COMPETITION", image: dComp },
+    { id: 6, yearRange: "2023-2024", title: titles[1], description: "CAPTURE YOUR CAMPUS", image: captureCampus }, 
+    { id: 7, yearRange: "2023-2024", title: titles[1], description: "DESIGN DAZZLE", image: dDazz },
+    { id: 8, yearRange: "2023-2024", title: titles[1], description: "JEOPARDY", image: jeopardy  },
 
-    { id: 9, yearRange: "2023-2024", title: titles[2], description: "Contemporary dance" },
-    { id: 10, yearRange: "2023-2024", title: titles[2], description: "Ballet performance" },
-    { id: 11, yearRange: "2023-2024", title: titles[2], description: "Hip-hop showcase" },
-    { id: 12, yearRange: "2023-2024", title: titles[2], description: "Traditional folk dance" },
+    { id: 9, yearRange: "2023-2024", title: titles[2], description: "FIGMA", image: figma },
+    { id: 10, yearRange: "2023-2024", title: titles[2], description: "2 FAST 2 FURIOUS", image: F2F },
+    { id: 11, yearRange: "2023-2024", title: titles[2], description: "CANVA", image:  canva  },
+    { id: 12, yearRange: "2023-2024", title: titles[2], description: "PHOTOSHOP", image: photoshop },
 
-    { id: 13, yearRange: "2023-2024", title: titles[3], description: "Independent films" },
-    { id: 14, yearRange: "2023-2024", title: titles[3], description: "Documentary screening" },
-    { id: 15, yearRange: "2023-2024", title: titles[3], description: "Short film festival" },
-    { id: 16, yearRange: "2023-2024", title: titles[3], description: "Classic cinema night" },
+    { id: 13, yearRange: "2023-2024", title: titles[3], description: "FINE ARTS", image: fineArt },
+    { id: 14, yearRange: "2023-2024", title: titles[3], description: "MOVIE SCREENINGS", image: movieScreen },
+    { id: 15, yearRange: "2023-2024", title: titles[3], description: "SHORT FILM PRODUCTION", image: movie },
+    { id: 16, yearRange: "2023-2024", title: titles[3], description: "DIGITAL DESIGN", image: dDesign },
   ];
 
   const slidesPerPage = 4;
@@ -49,13 +63,13 @@ const Events: React.FC = () => {
         <p>{events[0].yearRange}</p>
       </div>
 
-      {/* Carousel Wrapper - Full Width */}
+
       <div className="w-[95%] flex flex-col h-[70%] justify-evenly items-center">
-        {/* Event Carousel - Full Width */}
+
         <div className="w-full flex justify-between gap-2 items-center h-[1%] rounded">
           {titles.map((title, index) => {
             const isSelected = currentEventGroup === title;
-            
+
             return (
               <div
                 key={index}
@@ -64,12 +78,30 @@ const Events: React.FC = () => {
               ></div>
             );
           })}
-        </div>  
+        </div>
         <div className="w-full flex justify-between gap-6 items-center h-[65%]">
+
           {visibleEvents.map((event) => (
-            <div key={event.id} className="flex-1 flex items-center justify-center border rounded-xl h-[90%]">
-              <div className="flex items-center justify-center rounded-md w-full ">
-                <span className="text-3xl font-bold text-center">{event.title}</span>
+            <div 
+              key={event.id} 
+              className="flex-1 flex items-center justify-center border rounded-xl h-[90%] relative overflow-hidden group" 
+            >
+              {/* Background image */}
+              <div 
+                className="absolute inset-0 transition-transform duration-300 group-hover:scale-110"
+                style={{
+                  backgroundImage: `url(${event.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              ></div>
+
+              {/* Overlay with 60% opacity that fades out on hover */}
+              <div className="absolute inset-0 bg-black opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>
+
+              {/* Text that fades out on hover */}
+              <div className="relative z-10 flex items-center justify-center rounded-md w-full transition-opacity duration-300 group-hover:opacity-0">
+                <span className="text-3xl font-bold text-center">{event.description}</span>
               </div>
             </div>
           ))}
