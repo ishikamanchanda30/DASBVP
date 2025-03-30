@@ -63,7 +63,6 @@ const Events: React.FC = () => {
         <p>{events[0].yearRange}</p>
       </div>
 
-
       <div className="w-[95%] flex flex-col h-[70%] justify-evenly items-center">
 
         <div className="w-full flex justify-between gap-2 items-center h-[1%] rounded">
@@ -79,7 +78,7 @@ const Events: React.FC = () => {
             );
           })}
         </div>
-        <div className="w-full flex justify-between gap-6 items-center h-[65%]">
+        <div className="w-full flex flex-col md:flex-row justify-between md:gap-6 gap-2 items-center h-[65%]">
 
           {visibleEvents.map((event) => (
             <div 
