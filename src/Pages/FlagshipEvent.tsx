@@ -4,14 +4,15 @@ const FlagshipEvent: React.FC = () => {
   const date: String = "Feb'25"
 
   const events = [{
-    name: "Workshop",
+    name: "UI-UX WORKSHOP",
     desc: "Lorem ipsum dolor sit amet consectetur. Turpis imperdiet amet tortor convallis consectetur vibs."
   },
   {
-    name: "UI-UX Competition",
+    name: "DESIGN COMPETITION",
     desc: "Lorem ipsum dolor sit amet consectetur. Turpis imperdiet amet tortor convallis consectetur vibs."
-  }, {
-    name: "UI-UX Competition",
+  }, 
+  {
+    name: "PHOTOWALK",
     desc: "Lorem ipsum dolor sit amet consectetur. Turpis imperdiet amet tortor convallis consectetur vibs."
   }]
   return (

@@ -1,21 +1,15 @@
-
-
+import React from 'react'
+import HeadCard from './HeadCard'
 const Heads: React.FC = () => {
-  return (
-    <div className="text-white w-full h-full flex flex-col justify-evenly items-center">
-      <div className="flex flex-row w-90% justify-between items-center text-white">
-        <span>HEADS</span>
-        <span></span>
-        <span>DAS</span>
-      </div>
 
-      <div className="h-[80%] w-[90%] flex-wrap">
-        <div className="flex flex-col justify-end border w-[20%] h-[45%] border-box p-[2%]">
-          <img className="w-full h-full"/>
-          <span>Name</span>
-          <span>Position</span>
-        </div>
+  return (
+    <div className="text-white w-full h-full flex flex-col pt-15 items-center ">
+      <div className="flex flex-row w-[90%] justify-between items-center text-[#D3D3D3] text-7xl pb-10">
+        <span className='pr-4'>HEADS </span>
+        <span className='flex w-[90%] border-1 border-[#D3D3D3]'></span>
+        <span className='pl-4'>DAS</span>
       </div>
+      <HeadCard />
     </div>
   )
 }

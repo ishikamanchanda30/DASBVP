@@ -87,7 +87,7 @@ const Events: React.FC = () => {
             >
               {/* Background image */}
               <div 
-                className="absolute inset-0 transition-transform duration-300 group-hover:scale-110"
+                className="absolute inset-0 transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0 "
                 style={{
                   backgroundImage: `url(${event.image})`,
                   backgroundSize: 'cover',
