@@ -5,13 +5,13 @@ function Home() {
     <div className="w-screen h-screen bg-[#0D0D0D] text-white font-kumbh relative overflow-hidden">
       
       <div className='absolute w-[50%] h-[40%] top-[30%] left-[25%]
-      -rotate-10 leading-[1.4] 
+      -rotate-10  leading-[1.4] 
       tracking-tighter font-semibold flex justify-center
       items-center z-5'>
           <span className='flex items-center justify-center h-full'>
             <span className='text-[27rem] translate-y-[-4%]'>D</span>
             <span className='text-[18rem] flex items-center'>A</span>
-            <span className='text-[27rem] translate-y-[-4%]'>S</span>
+            <span className='text-[27rem] translate-y-[-3%]'>S</span>
           </span>
       </div>
       <div 
