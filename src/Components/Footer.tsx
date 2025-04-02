@@ -1,6 +1,5 @@
 function Footer() {
   return (
-    
       <div className='w-full flex flex-col justify-between bg-[#0D0D0D] text-white overflow-hidden' >
         <div className='mx-auto my-0  md:text-[4rem] lg:text-[8rem] text-left md:text-center p-0 box-border'>
           DIGITAL ARTS SOCIETY

@@ -1,36 +1,9 @@
 import { useGSAP } from '@gsap/react';
 import React from 'react';
 import gsap from 'gsap';
-
-const coreteam=[
-  {
-    membername:"Vansh Gupta",
-    memberpic:"src\assets\core.jpg",
-    memberpostion:"President",
-    memberdisc:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Hiswedhuwd"
-  },
-  {
-    membername:"Pranaya Bansal",
-    memberpic:"src\assets\core.jpg",
-    memberpostion:"Vice President",
-    memberdisc:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Hiswedhuwd"
-  },
-  {
-    membername:"Uday Singh Pundeer",
-    memberpic:"src\assets\core.jpg",
-    memberpostion:"General Secretary",
-    memberdisc:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Hiswedhuwd"
-  },
-  {
-    membername:"Raman",
-    memberpic:"src\assets\core.jpg",
-    memberpostion:"Chapter Officer",
-    memberdisc:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Hiswedhuwd"
-  }
-]
+import coreTeam from './CoreTeam';
 
 const HomeTeam: React.FC = () => {
-
   return (
     <> 
       <div className='w-screen h-screen bg-[#0D0D0D] text-white flex flex-row py-20 px-8 font-kumbh overflow-x-hidden relative'> 

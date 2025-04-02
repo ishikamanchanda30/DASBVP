@@ -1,35 +1,11 @@
 import React from 'react';
-import faculty from '../assets/faculty.jpg';
-interface FacultyMember {
-    name: string;
-    description: string;
-    role: string;
-    imageUrl: string;
-}
+import facultyMembers from '../data/Faculty'
 
 const Faculty: React.FC = () => {
     const [currentIndex, setCurrentIndex] = React.useState(0);
-
-    const facultyMembers: FacultyMember[] = [
-        {
-            name: "DR. ARVIND REHALIA",
-            description: "Lorem ipsum dolor sit amet consectetur. Enim est sit gravida tempus urna ut mi eget sagittis. Posuere enim velit vel a molestie eu penatibus sed blandit. Magna mi dui vulputate pellentesque hendrerit elit.",
-            role: "DAS MEMBER",
-            imageUrl: faculty
-        },
-        {
-            name: "DR. ARVIND REHALIA",
-            description: "Lorem ipsum dolor sit amet consectetur. Enim est sit gravida tempus urna ut mi eget sagittis. Posuere enim velit vel a molestie eu penatibus sed blandit. Magna mi dui vulputate pellentesque hendrerit elit.",
-            role: "DAS MEMBER",
-            imageUrl: faculty
-        },
-
-    ];
-
     const handlePrevious = () => {
         setCurrentIndex((prev) => (prev === 0 ? facultyMembers.length - 1 : prev - 1));
     };
-
     const handleNext = () => {
         setCurrentIndex((prev) => (prev === facultyMembers.length - 1 ? 0 : prev + 1));
     };
