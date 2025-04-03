@@ -22,23 +22,29 @@ const FlagshipEvent: React.FC = () => {
         <span className='text-6xl md:text-6xl font-semibold'>{date}</span>
       </div>
       <div className="h-[80%] md:h-[40%] p-5 md:p-0 flex flex-col md:flex-row w-[95%] gap-8"> {/* Parent container */}
-        {events.map((event, index) => (
-          <div
-            key={index}
-            className="md:h-[90%]  border rounded-xl flex flex-col justify-evenly items-center 
-                      transition-all duration-300 flex-1 hover:flex-[1.4]" 
-            /* flex-1 = equal width, hover:flex-[1.2] = grows 20% larger */
-          >
-            <div className="w-[90%] h-[10%] flex justify-between items-center">
-              <div className="h-full aspect-square bg-white rounded-full" />
-              <span className="text-lg hover:underline cursor-pointer"><a href="">REGISTER</a></span>
-            </div>
-            <div className="w-[90%] h-[50%] flex flex-col justify-center">
-              <span className="text-2xl">{event.name}</span>
-              <span className="text-sm font-light">{event.desc}</span>
-            </div>
+      {events.map((event, index) => (
+        <div
+          key={index}
+          className="group md:h-[90%] border rounded-xl flex flex-col justify-evenly items-center 
+                    transition-all duration-300 flex-1 hover:flex-[1.4] 
+                    bg-black text-white hover:bg-white hover:text-black"
+        >
+          <div className="w-[90%] h-[10%] flex justify-between items-center">
+            {/* Changes color when parent is hovered */}
+            <div className="h-full aspect-square bg-white rounded-full group-hover:bg-black" />
+            <span className="text-lg hover:underline cursor-pointer">
+              <a href="" className="group-hover:text-black">REGISTER</a>
+            </span>
           </div>
-        ))}
+          <div className="w-[90%] h-[50%] flex flex-col justify-center">
+            <span className="text-2xl group-hover:font-semibold"> {event.name} </span>
+            <span className="text-sm font-light"> {event.desc} </span>
+          </div>
+        </div>
+      ))}
+
+
+
       </div>
     </div>
   );
