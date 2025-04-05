@@ -20,7 +20,7 @@ const TeamHeading: React.FC = () => {
         handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    const yPosition = `${(scrollPositionY) * 25}%`;
+    const yPosition = `${(scrollPositionY) * 130}%`;
     const fontSize = `${5 + (scrollPositionY * 4)}rem`;
 
     return (
@@ -28,7 +28,7 @@ const TeamHeading: React.FC = () => {
             <h1 className='' style={{
                 position: 'absolute',
                 fontSize: fontSize,
-                transform: 'translateY(100%)',
+                transform: 'translateY(1%)',
                 bottom: yPosition,
                 transition: 'font-size 0.1s ease-in ease-out',
                 zIndex: 10,

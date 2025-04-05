@@ -5,9 +5,11 @@ const Team: React.FC = () => {
   return (
     <div className=" bg-[#0D0D0D] flex flex-col ">
       <TeamHeading />
-      <div >
-      <Heads/>
+      <div className='min-h-screen'>
+
+      <Heads />
       </div>
+
     </div>
   )
 }
