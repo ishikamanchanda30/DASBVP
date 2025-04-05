@@ -1,4 +1,5 @@
 import faculty from '../assets/faculty.jpg';
+import faculty2 from '../assets/faculty2.png'
 interface FacultyMember {
     name: string;
     description: string;
@@ -9,15 +10,15 @@ interface FacultyMember {
 const facultyMembers: FacultyMember[] = [
     {
         name: "DR. ARVIND REHALIA",
-        description: "Lorem ipsum dolor sit amet consectetur. Enim est sit gravida tempus urna ut mi eget sagittis. Posuere enim velit vel a molestie eu penatibus sed blandit. Magna mi dui vulputate pellentesque hendrerit elit.",
-        role: "DAS MEMBER",
+        description: "Dr. Arvind Rehalia is an educator and innovator with over 18 years of experience in teaching, research, and entrepreneurship. He’s currently an Associate Professor in IT at Bharati Vidyapeeth’s College of Engineering, New Delhi. ",
+        role: "FACULTY",
         imageUrl: faculty
     },
     {
         name: "DR. ARVIND REHALIA",
-        description: "Lorem ipsum dolor sit amet consectetur. Enim est sit gravida tempus urna ut mi eget sagittis. Posuere enim velit vel a molestie eu penatibus sed blandit. Magna mi dui vulputate pellentesque hendrerit elit.",
-        role: "DAS MEMBER",
-        imageUrl: faculty
+        description: "Passionate about nurturing startups, he leads the college’s Entrepreneurship Development Cell. Dr. Rehalia brings a unique blend of technical and leadership skills to everything he does.",
+        role: "FACULTY",
+        imageUrl: faculty2
     },
 
 ];
