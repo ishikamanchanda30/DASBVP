@@ -2,7 +2,7 @@ import AboutUs from './Pages/AboutUs';
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Contact from './Pages/Contact';
 import Cookies from './Pages/Cookies';
-import Events from './Pages/Events';
+import EventPage from './Pages/EventPage';
 import FlagshipEvent from './Pages/FlagshipEvent';
 import Footer from './Components/Footer';
 import Home from './Pages/Home';
@@ -43,7 +43,7 @@ const App: React.FC = () => {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/events" element={<EventPage />} />
           <Route path="/flagship-event" element={<FlagshipEvent />} />
           <Route path="/team" element={<Team />} />
           <Route path="/portfolio" element={<Portfolio />} />

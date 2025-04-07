@@ -38,13 +38,12 @@ function Home() {
       <div className="hidden md:block absolute bottom-20 left-12 w-[2px] h-2 bg-white"></div>
 
       <div className="absolute top-20 left-12 max-w-sm text-m text-left leading-5">
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout.
+      Welcome to the art society of BVCOE. We shoot, sketch, design, and create — one frame, one pixel, one idea at a time.
       </div>
 
       <div className="absolute bottom-20 right-12 max-w-sm text-m text-right leading-5">
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout.
+      We don’t just create visuals — we craft experiences.
+      Every frame is a story waiting to unfold.
       </div>
 
       <div className="hidden md:block absolute bottom-32 left-1/2 transform -translate-x-1/2 text-center text-sm text-gray-400">
