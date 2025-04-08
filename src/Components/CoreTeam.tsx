@@ -75,7 +75,7 @@ const Slide = ({
 const Carousel = ({ slides }: { slides: SlideData[] }) => {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const autoPlayRef = useRef<NodeJS.Timeout>();
+  const autoPlayRef = useRef<number | null>(null);
 
   const goToSlide = useCallback((index: number) => {
     if (isTransitioning || index === current) return;
@@ -95,10 +95,15 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
   }, [current, goToSlide, slides.length]);
 
   useEffect(() => {
-    autoPlayRef.current = setInterval(goToNext, 5000);
-    return () => clearInterval(autoPlayRef.current);
+    autoPlayRef.current = window.setInterval(goToNext, 5000);
+  
+    return () => {
+      if (autoPlayRef.current !== null) {
+        clearInterval(autoPlayRef.current);
+      }
+    };
   }, [goToNext]);
-
+  
   const getVisibleSlides = () => {
     const prevIndex = (current - 1 + slides.length) % slides.length;
     const nextIndex = (current + 1) % slides.length;

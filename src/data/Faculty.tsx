@@ -16,7 +16,7 @@ const facultyMembers: FacultyMember[] = [
     },
     {
         name: "DR. ARVIND REHALIA",
-        description: "Passionate about nurturing startups, he leads the college’s Entrepreneurship Development Cell. Dr. Rehalia brings a unique blend of technical and leadership skills to everything he does.",
+        description: "Passionate about nurturing startups, he leads the college's Entrepreneurship Development Cell. Dr. Rehalia brings a unique blend of technical and leadership skills to everything he does.",
         role: "FACULTY",
         imageUrl: faculty2
     },
