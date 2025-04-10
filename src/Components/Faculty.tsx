@@ -71,7 +71,7 @@ const Faculty: React.FC = () => {
                 </div>
 
                 <div className="flex justify-center items-center md:justify-end md:place-items-end  bottom-0 ">
-                    <div className="text-6xl md:text-8xl font-[600] text-white md:p-4">
+                    <div className="text-6xl md:text-8xl font-[600] text-end text-white md:p-4">
                         FACULTY<br />INCHARGE
                     </div>
                 </div>

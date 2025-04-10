@@ -4,6 +4,7 @@ import saanvi from '../assets/Heads/saanvi.jpg'
 import yash from '../assets/Heads/yash.jpg'
 import teena from '../assets/Heads/teena.jpg'
 import shristi from '../assets/Heads/shristi.jpg'
+import vidhi from "../assets/Heads/vidhi.jpg"
 interface HeadMembers {
     name: string,
     position: string,
@@ -43,7 +44,7 @@ const heads: HeadMembers[] = [
     {
         name: 'Vidhi Setiya',
         position: 'Content & Documentation',
-        image: pratham
+        image: vidhi
     },
     {
         name: 'Yash Kaul',
