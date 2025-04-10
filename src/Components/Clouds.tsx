@@ -18,13 +18,13 @@ const Clouds = () => {
 
     }, []);
 
-    const yPosition = `-${(scrollPosition) * 130}%`;
+    const yPosition = `-${(scrollPosition) * 200}%`;
     const xPosition = `-${(scrollPosition) * 20}%`;
     return (
 
         <div className="min-h-screen min-w-screen max-w-screen bg-[#0d0d0d] relative flex justfiy-between overflow-hidden z-10">
             <div className='absolute bottom-0 left-0' style={{
-                transform: 'translateY(1%)',
+                transform: 'translateY(0.5%)',
                 bottom: yPosition,
                 left: xPosition,
                 zoom: 2.1,

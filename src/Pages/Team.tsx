@@ -1,13 +1,21 @@
 import CoreTeam from "../Components/CoreTeam"
 import Heads from "../Components/Heads"
-import TeamHeading from "../Components/TeamHeading"
+import Clouds from "../Components/Clouds"
 const Team: React.FC = () => {
   return (
     <div className=" bg-[#0D0D0D] flex flex-col ">
-      <TeamHeading />
-      <div className='min-h-screen'>
+      <div className='min-h-screen min-w-screen '>
 
-      <Heads />
+        <Clouds />
+      </div>
+
+      <div className='min-h-screen min-w-screen max-h-screen max-w-screen bg-[#0d0d0d]'>
+        <CoreTeam/>
+      </div>
+      <div className='min-h-screen min-w-screen '>
+
+
+        <Heads />
       </div>
 
     </div>

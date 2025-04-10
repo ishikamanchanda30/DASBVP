@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import coreTeam from "../data/Core";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
 interface SlideData {
   name: string;
   position: string;
@@ -38,32 +37,32 @@ const Slide = ({
           src={slide.image}
         />
 
-        {/* Left image - with 20% brighter fade */}
+   
         {isLeft && (
           <div className="absolute inset-0">
-            {/* Left edge fade (20% brighter) */}
+           
             <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-gradient-to-r from-black/60 to-transparent" />
-            {/* Right edge fade (20% brighter) */}
+       
             <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-black/60 to-transparent" />
-            {/* Overall overlay (20% brighter) */}
+    
             <div className="absolute inset-0 bg-black/60" />
           </div>
         )}
 
-        {/* Right image - with 20% brighter fade */}
+  
         {isRight && (
           <div className="absolute inset-0">
-            {/* Right edge fade (20% brighter) */}
+          
             <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-black/60 to-transparent" />
-            {/* Left edge fade (20% brighter) */}
+      
             <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-gradient-to-r from-black/60 to-transparent" />
-            {/* Overall overlay (20% brighter) */}
+         
             <div className="absolute inset-0 bg-black/60" />
           </div>
         )}
 
 
-        {/* Selected overlay */}
+   
         {isSelected && (
           <div className="absolute inset-0 bg-black/30" />
         )}
@@ -124,9 +123,9 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
         <span className='pl-4'>DAS</span>
       </div>
 
-      {/* Carousel Container - takes ~70% of height */}
+
       <div className="relative w-[85%] h-[70%] flex items-center">
-        {/* Left navigation button - positioned slightly inside left image */}
+      
         <button
           className="absolute left-[2%] z-20 p-2 text-white hover:scale-110 transition-transform"
           onClick={(e) => {
@@ -137,7 +136,6 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
           <ChevronLeft size={40} />
         </button>
 
-        {/* Right navigation button - positioned slightly inside right image */}
         <button
           className="absolute right-[2%] z-20 p-2 text-white hover:scale-110 transition-transform"
           onClick={(e) => {

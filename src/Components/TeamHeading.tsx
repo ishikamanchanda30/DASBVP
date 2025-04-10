@@ -20,8 +20,8 @@ const TeamHeading: React.FC = () => {
         return () => window.removeEventListener('scroll', handleScroll);
 
     }, []);
-    const yPosition = `${(scrollPositionY) * 130}%`;
-    const fontSize = `${5 + (scrollPositionY * 4)}rem`;
+    const yPosition = `${(scrollPositionY) * 0}%`;
+    const fontSize = `${5 + (scrollPositionY * 10)}rem`;
 
     return (
         <div className='bg-[#0D0D0D] min-w-screen scroll-smooth h-[100vh] flex justify-center text-center items-center font-bold text-white '>
