@@ -1,5 +1,3 @@
-import left from '../assets/left.png'
-import right from '../assets/right.png'
 import React, { useEffect, useState } from 'react';
 
 const TeamHeading: React.FC = () => {
@@ -20,18 +18,15 @@ const TeamHeading: React.FC = () => {
         return () => window.removeEventListener('scroll', handleScroll);
 
     }, []);
-    const yPosition = `${(scrollPositionY) * 0}%`;
-    const fontSize = `${5 + (scrollPositionY * 10)}rem`;
 
     return (
-        <div className='bg-[#0D0D0D] min-w-screen scroll-smooth h-[100vh] flex justify-center text-center items-center font-bold text-white '>
+        <div className={`bg-[#0d0d0d] min-w-screen min-h-screen max-h-screen scroll-smooth flex justify-center text-center text-9xl md:text-5xl lg:text-9xl items-center font-bold text-white overflow-hidden`}>
             <h1 className='' style={{
                 position: 'absolute',
-                fontSize: fontSize,
-                transform: 'translateY(1%)',
-                bottom: yPosition,
+                bottom: '50%',
                 transition: 'font-size 0.1s ease-in ease-out',
-        
+                overflow: 'hidden',
+
             }}>
                 OUR TEAM
             </h1>

@@ -1,5 +1,3 @@
-import DASabout from '../assets/DASabout.png';
-
 function Home() {
   return (
     <div className="w-screen h-screen bg-[#0D0D0D] text-white font-kumbh relative overflow-hidden">
