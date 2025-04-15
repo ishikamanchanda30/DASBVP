@@ -16,15 +16,13 @@ const TeamHeading: React.FC = () => {
         window.addEventListener('scroll', handleScroll);
         handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
-
     }, []);
-
     return (
-        <div className={`bg-[#0d0d0d] min-w-screen min-h-screen max-h-screen scroll-smooth flex justify-center text-center text-9xl md:text-5xl lg:text-9xl items-center font-bold text-white overflow-hidden`}>
+        <div className={`bg-[#0d0d0d] min-w-screen h-screen max-h-screen scroll-smooth flex justify-center text-center text-9xl md:text-5xl lg:text-9xl items-center font-bold text-white overflow-hidden`}>
             <h1 className='' style={{
                 position: 'absolute',
                 bottom: '50%',
-                transition: 'font-size 0.1s ease-in ease-out',
+                transition: '0.1s ease-in ease-out',
                 overflow: 'hidden',
 
             }}>

@@ -3,9 +3,9 @@ import heads from '../data/Teams'
 const HeadCard = () => {
     return (
         
-            <div className="flex flex-wrap justify-center md:justify-between items-center gap-x-10 gap-y-10 md:w-4/5 h-[80%] w-5/6">
+            <div className="flex flex-wrap justify-center md:justify-between items-center gap-x-10 gap-y-10 md:w-4/5 h-[80%] w-5/6 ">
                 {heads.map((head, index) => (
-                    <div key={index} className="relative h-[45%] w-4/5 overflow-hidden rounded-xl md:w-1/5">
+                    <div key={index} className="relative h-[45%] w-4/5 overflow-hidden rounded-xl md:w-1/5 ">
                         <img
                             src={head.image}
                             alt={head.name}

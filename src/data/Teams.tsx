@@ -17,11 +17,6 @@ const heads: HeadMembers[] = [
         image: ishika
     },
     {
-        name: 'Naisha Chawla',
-        position: 'Sponsorship',
-        image: pratham
-    },
-    {
         name: 'Pratham Chhabra',
         position: 'Video Editing',
         image: pratham
@@ -50,6 +45,11 @@ const heads: HeadMembers[] = [
         name: 'Yash Kaul',
         position: 'Design',
         image: yash
+    },
+    {
+        name: '',
+        position: '',
+        image: ''
     },
 ]
 export default heads

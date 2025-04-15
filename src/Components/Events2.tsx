@@ -42,7 +42,7 @@ const Events2: React.FC = () => {
   return (
     <div className="w-screen h-screen bg-[#0D0D0D] text-white flex flex-col font-kumbh items-center justify-center">
       {/* Year Range */}
-      <div className="w-[95%] flex items-end justify-start text-7xl font-bold h-[30%]">
+      <div className="w-[95%] flex items-end justify-end text-7xl font-bold h-[30%]">
         <p>{events[0].yearRange}</p>
       </div>
 

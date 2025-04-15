@@ -26,13 +26,13 @@ const coreTeam: CoreTeam[] = [
         name: "Uday Singh Pundeer",
         image:uday,
         position: "General Secretary",
-        desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Hiswedhuwd"
+        desc: "Guiding our Creative Studio's vision while encouraging individual artistic development."
     },
     {
         name: "Raman",
         image: raman,
         position: "Chapter Officer",
-        desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Hiswedhuwd"
+        desc: "Guiding our Creative Studio's vision while encouraging individual artistic development."
     }
 ]
 export default coreTeam;

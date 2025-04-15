@@ -4,7 +4,7 @@ import Clouds from "../Components/Clouds"
 const Team: React.FC = () => {
   return (
     <div className='bg-[#0D0D0D] flex flex-col'>
-      <div className='min-w-screen md:min-h-screen bg-[#0d0d0d]'>
+      <div className='min-w-screen h-[20%] bg-[#0d0d0d]'>
         <Clouds />
       </div>
 
@@ -12,7 +12,7 @@ const Team: React.FC = () => {
         <CoreTeam />
       </div>
 
-      <div className='min-w-screen bg-[#0d0d0d] h-[330vh] '>
+      <div className='min-w-screen bg-[#0d0d0d] md:h-[100vh] h-[330vh] '>
         <Heads />
       </div>
     </div>

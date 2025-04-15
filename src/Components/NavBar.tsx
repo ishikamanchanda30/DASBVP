@@ -17,7 +17,7 @@ const NavBar: React.FC = () => {
             <div className="flex lg:gap-15 gap-5">
                 <Link
                     to="/about-us"
-                    className={`${isActive('/')}`}
+                    className={`${isActive('/about-us')}`}
                 >
                     ABOUT US
                 </Link>
