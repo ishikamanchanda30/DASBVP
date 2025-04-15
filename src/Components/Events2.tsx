@@ -8,7 +8,7 @@ import movieScreen from "../assets/Events2/movieScreen.jpg"
 import jeopardy from "../assets/Events2/jeopardy.jpg"
 import cap from "../assets/Events2/cap.jpg"
 
-const Events: React.FC = () => {
+const Events2: React.FC = () => {
   const titles = ["PHOTOWALKS & QUIZZES", "COMPETITIONS & MORE"];
   const events = [
     { id: 1, yearRange: "2023-2024", title: titles[0], description: "DELHI HAAT INA", image: delhiHaat },
@@ -42,7 +42,7 @@ const Events: React.FC = () => {
   return (
     <div className="w-screen h-screen bg-[#0D0D0D] text-white flex flex-col font-kumbh items-center justify-center">
       {/* Year Range */}
-      <div className="w-[95%] flex items-end justify-end text-7xl font-bold h-[30%]">
+      <div className="w-[95%] flex items-end justify-start text-7xl font-bold h-[30%]">
         <p>{events[0].yearRange}</p>
       </div>
 
@@ -66,7 +66,7 @@ const Events: React.FC = () => {
           {visibleEvents.map((event) => (
             <div
               key={event.id}
-              className="flex-1 flex items-center justify-center border rounded-xl h-[90%] relative overflow-hidden group"
+              className="w-[80%] md:w-full flex-1 flex items-center justify-center border rounded-xl md:h-[90%] relative overflow-hidden group"
             >
               {/* Background image */}
               <div
@@ -123,4 +123,4 @@ const Events: React.FC = () => {
   );
 };
 
-export default Events;
+export default Events2;

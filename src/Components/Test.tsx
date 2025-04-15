@@ -20,7 +20,7 @@ function Home() {
 
             <div className={`absolute w-[50%] h-[40%] top-[30%] left-[25%] leading-[1.4] tracking-tighter font-semibold flex justify-center items-center z-5 `} style={{
                 transform: `rotate(-${rotation}deg)`,
-                transition: 'transform 0.5s ease-out'
+                transition: 'transform 0.5s ease-in'
             }}>
                 <span className='flex items-center justify-center h-full'>
                     <span className='lg:text-[27rem] translate-y-[-4%] md:text-[24rem] text-[16rem]'>D</span>
@@ -36,7 +36,7 @@ function Home() {
                     md:w-[46%] md:left-[29%] text-[10rem] w-[56%] left-[22%] h-[26%] top-[37%]`}
                 style={{
                     transform: `rotate(-${rotation /4}deg)`,
-                    transition: 'transform 0.5s ease-out'
+                    transition: 'transform 0.5s ease-in'
                 }}
             >
                 <span className='rotate-5 translate-x-[-5%]'>DAS</span>
@@ -49,7 +49,7 @@ function Home() {
                      md:left-[37%] text-[7rem] w-[34%] left-[33%] h-[16%] top-[42%]'
                 style={{
                     transform: `rotate(${(rotation / 3)}deg)`,
-                    transition: 'transform 0.5s ease-out'
+                    transition: 'transform 0.5s ease-in'
                 }}
             >
                 <span className='rotate-4 translate-x-[-2%]'>DAS</span>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import RotatingCircle from './Circle';
-
+import emailjs from "emailjs-com"
 const Contacts: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -9,10 +9,7 @@ const Contacts: React.FC = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(formData);
-  };
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -20,6 +17,22 @@ const Contacts: React.FC = () => {
       [e.target.name]: e.target.value
     });
   };
+
+  const submitForm = (event) => {
+    event.preventDefault();
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAIL_SERVICE_ID,
+      import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+      event.target,
+      import.meta.env.VITE_EMAIL_USER_ID
+    )
+      .then(() => {
+        console.log("Email Sent Successfully");
+      })
+      .catch(error => {
+        console.log("Error in sending Mail", error);
+      })
+  }
 
   return (
 
@@ -50,10 +63,9 @@ const Contacts: React.FC = () => {
             A LINE
           </div>
         </div>
-
         <div className="w-full md:w-1/2 m-0 mt-2 md:m-10">
           <div className='w-full'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={submitForm}>
               <div className="mb-6">
                 <input
                   type="text"

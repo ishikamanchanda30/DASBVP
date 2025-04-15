@@ -54,7 +54,7 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<AboutUs />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/events" element={<EventPage />} />
           <Route path="/flagship-event" element={<FlagshipEvent />} />

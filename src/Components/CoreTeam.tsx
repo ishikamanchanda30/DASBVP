@@ -22,13 +22,12 @@ const Slide = ({
   onClick: () => void;
 }) => {
   return (
-    <div
-      className={`relative h-full transition-all duration-500 ease-[cubic-bezier(0.33,1,0.68,1)]
+    <div className={`relative h-full transition-all duration-500 ease-[cubic-bezier(0.33,1,0.68,1)]
         ${isSelected ? "w-[45%] scale-105 z-10" : "w-[35%] scale-85 z-0"}`}
     >
       <div
         className={`relative h-full rounded overflow-hidden cursor-pointer
-          ${isSelected ? "h-[80%]" : "h-[50%]"}`}
+          ${isSelected ? "h-[80%]" : "h-[80%]"}`}
         onClick={onClick}
       >
         <img
@@ -37,32 +36,32 @@ const Slide = ({
           src={slide.image}
         />
 
-   
+
         {isLeft && (
           <div className="absolute inset-0">
-           
+
             <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-gradient-to-r from-black/60 to-transparent" />
-       
+
             <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-black/60 to-transparent" />
-    
+
             <div className="absolute inset-0 bg-black/60" />
           </div>
         )}
 
-  
+
         {isRight && (
           <div className="absolute inset-0">
-          
+
             <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-black/60 to-transparent" />
-      
+
             <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-gradient-to-r from-black/60 to-transparent" />
-         
+
             <div className="absolute inset-0 bg-black/60" />
           </div>
         )}
 
 
-   
+
         {isSelected && (
           <div className="absolute inset-0 bg-black/30" />
         )}
@@ -95,14 +94,14 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
 
   useEffect(() => {
     autoPlayRef.current = window.setInterval(goToNext, 5000);
-  
+
     return () => {
       if (autoPlayRef.current !== null) {
         clearInterval(autoPlayRef.current);
       }
     };
   }, [goToNext]);
-  
+
   const getVisibleSlides = () => {
     const prevIndex = (current - 1 + slides.length) % slides.length;
     const nextIndex = (current + 1) % slides.length;
@@ -115,7 +114,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
   };
 
   return (
-    <div className="text-white w-[100vw] h-[95vh] flex flex-col pt-15 items-center">
+    <div className="text-white w-[100vw] h-[70vh] md:h-[95vh] flex flex-col pt-15 items-center">
       {/* Title */}
       <div className="flex flex-row w-[85%] justify-between items-center text-[#D3D3D3] text-6xl mb-5 h-[15%]">
         <span className='pr-4'>CORE </span>
@@ -125,7 +124,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
 
 
       <div className="relative w-[85%] h-[70%] flex items-center">
-      
+
         <button
           className="absolute left-[2%] z-20 p-2 text-white hover:scale-110 transition-transform"
           onClick={(e) => {
@@ -161,7 +160,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
       </div>
 
       {/* Info Section - no divider */}
-      <div className="w-[82%] mt-14 flex flex-col md:flex-row justify-between h-[12%] ">
+      <div className="w-[82%] mt-14 flex flex-col md:flex-row justify-between h-[60%] md:h-[12%] ">
         <div className="w-[20%]">
           <h2 className="text-2xl text-white font-bold uppercase tracking-wider">
             {slides[current].name}
