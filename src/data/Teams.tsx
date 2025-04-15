@@ -47,9 +47,9 @@ const heads: HeadMembers[] = [
         image: yash
     },
     {
-        name: null,
-        position: null,
-        image: null
+        name: '',
+        position: '',
+        image: ''
     },
 ]
 export default heads
