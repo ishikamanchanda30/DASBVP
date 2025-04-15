@@ -7,7 +7,6 @@ import Cookies from './Pages/Cookies';
 import EventPage from './Pages/EventPage';
 import FlagshipEvent from './Pages/FlagshipEvent';
 import Footer from './Components/Footer';
-import Home from './Pages/Home';
 import NavBar from './Components/NavBar';
 import NavbarMobile from './Components/NavbarMobile';
 import Portfolio from './Pages/Portfolio';

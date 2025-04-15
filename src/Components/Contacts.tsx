@@ -18,12 +18,12 @@ const Contacts: React.FC = () => {
     });
   };
 
-  const submitForm = (event) => {
+  const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     emailjs.sendForm(
       import.meta.env.VITE_EMAIL_SERVICE_ID,
       import.meta.env.VITE_EMAIL_TEMPLATE_ID,
-      event.target,
+      event.target as HTMLFormElement,
       import.meta.env.VITE_EMAIL_USER_ID
     )
       .then(() => {
@@ -31,8 +31,9 @@ const Contacts: React.FC = () => {
       })
       .catch(error => {
         console.log("Error in sending Mail", error);
-      })
-  }
+      });
+  };
+  
 
   return (
 
