@@ -114,7 +114,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
   };
 
   return (
-    <div className="text-white w-[100vw] h-[70vh] md:h-[95vh] flex flex-col pt-15 items-center">
+    <div className="text-white w-[100vw] h-[90vh] md:h-[105vh] flex flex-col pt-15 items-center">
       {/* Title */}
       <div className="flex flex-row w-[85%] justify-between items-center text-[#D3D3D3] text-6xl mb-5 h-[15%]">
         <span className='pr-4'>CORE </span>
@@ -161,7 +161,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
 
       {/* Info Section - no divider */}
       <div className="w-[82%] mt-14 flex flex-col md:flex-row justify-between h-[60%] md:h-[12%] ">
-        <div className="w-[20%]">
+        <div className="md:w-[20%] w-full">
           <h2 className="text-2xl text-white font-bold uppercase tracking-wider">
             {slides[current].name}
           </h2>
@@ -169,7 +169,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
             {slides[current].position}
           </p>
         </div>
-        <p className="text-l text-gray-300 w-[71%] border-l border-white/50] pl-5 box-border">
+        <p className="text-l text-gray-300 md:w-[71%] w-full border-l border-white/50] pl-5 box-border">
           {slides[current].desc}
         </p>
       </div>

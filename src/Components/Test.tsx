@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 function Home() {
     const [rotation, setRotation] = useState(0);
-    const [IsLoaded, setIsLoaded] = useState(false);
     const minRotation = -12;
     const maxRotation = 12;
+
     useEffect(() => {
         const handleScroll = () => {
             const newRotation = minRotation + (1 * (maxRotation - minRotation));

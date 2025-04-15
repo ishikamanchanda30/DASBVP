@@ -1,5 +1,4 @@
 import Faculty from '../Components/Faculty';
-import Home from './Home';
 import React from 'react';
 import Test from '../Components/Test';
 

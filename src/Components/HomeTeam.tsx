@@ -1,7 +1,5 @@
-import { useGSAP } from '@gsap/react';
+
 import React from 'react';
-import gsap from 'gsap';
-import coreTeam from './CoreTeam';
 
 const HomeTeam: React.FC = () => {
   return (
