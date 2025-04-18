@@ -5,6 +5,7 @@ import yash from '../assets/Heads/yash.jpg'
 import teena from '../assets/Heads/teena.jpg'
 import shristi from '../assets/Heads/shristi.jpg'
 import vidhi from "../assets/Heads/vidhi.jpg"
+import naisha from "../assets/Heads/naisha.jpg"
 interface HeadMembers {
     name: string,
     position: string,
@@ -47,9 +48,9 @@ const heads: HeadMembers[] = [
         image: yash
     },
     {
-        name: '',
-        position: '',
-        image: ''
+        name: 'Naisha',
+        position: 'Sponsorship',
+        image: naisha
     },
 ]
 export default heads
