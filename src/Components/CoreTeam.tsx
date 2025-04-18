@@ -93,7 +93,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
   }, [current, goToSlide, slides.length]);
 
   useEffect(() => {
-    autoPlayRef.current = window.setInterval(goToNext, 5000);
+    autoPlayRef.current = window.setInterval(goToNext, 2000);
 
     return () => {
       if (autoPlayRef.current !== null) {
@@ -114,7 +114,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
   };
 
   return (
-    <div className="text-white w-[100vw] h-[90vh] md:h-[105vh] flex flex-col pt-15 items-center">
+    <div className="text-white w-[100vw] h-[90vh] md:h-[95vh] flex flex-col pt-15 items-center">
       {/* Title */}
       <div className="flex flex-row w-[85%] justify-between items-center text-[#D3D3D3] text-6xl mb-5 h-[15%]">
         <span className='pr-4'>CORE </span>

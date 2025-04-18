@@ -43,12 +43,12 @@ const Contacts: React.FC = () => {
           <div>
             <h2 className="text-sm md:text-2xl font-[600] ">CONTACT</h2>
             <p className="text-sm md:text-lg">dasbvp@gmail.com</p>
-            <p className="text-sm md:text-lg">9876543210</p>
+            <p className="text-sm md:text-lg">7827585665</p>
           </div>
           <div>
             <h2 className="text-2xl font-[600] ">SOCIALS</h2>
-            <a href="#" className="block hover:text-gray-300 transition-colors">linkedin</a>
-            <a href="#" className="block hover:text-gray-300 transition-colors">instagram</a>
+            <a href="https://www.linkedin.com/company/digital-arts-society/" className="block hover:text-gray-300 transition-colors">linkedin</a>
+            <a href="https://www.instagram.com/dasbvp/?hl=en" className="block hover:text-gray-300 transition-colors">instagram</a>
           </div>
         </div>
         <div className='w-1/2'>
