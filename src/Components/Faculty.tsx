@@ -10,7 +10,7 @@ const Faculty: React.FC = () => {
     };
 
     return (
-        <div className="w-screen h-screen bg-[#0D0D0D] text-[#D9D9D9]">
+        <div className="w-screen bg-[#0D0D0D] text-[#D9D9D9] ">
 
             <div className="h-full mx-auto px-4 py-12 relative grid grid-cols-1 md:grid-cols-3">
                 <div className=" flex flex-col p-5 justify-between ">
