@@ -65,7 +65,7 @@ const Events2: React.FC = () => {
             {visibleEvents.map((event) => (
               <div
                 key={event.id}
-                className="w-[45%] md:w-1/4 flex items-center justify-center border rounded-xl h-[45%] md:aspect-auto md:h-[90%] relative overflow-hidden group"
+                className="w-[45%] md:w-1/5 flex items-center justify-center border rounded-xl h-[45%] md:aspect-auto md:h-[90%] relative overflow-hidden group"
               >
                 {/* Background image */}
                 <div
