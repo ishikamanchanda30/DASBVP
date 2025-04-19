@@ -21,7 +21,7 @@ const Clouds = () => {
     const yTransform = `${(-scrollPosition) * 100}%`;
     return (
 
-        <div className="min-w-screen  h-screen bg-[#0d0d0d] relative flex justfiy-between overflow-hidden z-10">
+        <div className="min-w-screen max-w-screen h-screen bg-[#0d0d0d] relative flex justfiy-between overflow-hidden z-10">
             <div className='absolute left-0 flex md:-bottom-40 -bottom-10' style={{
                 transform: `translateY(${yTransform}) scale(1.2)`,
             }}>

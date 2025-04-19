@@ -42,7 +42,7 @@ const Events2: React.FC = () => {
   return (
     <div className="w-screen h-screen bg-[#0D0D0D] text-white flex flex-col font-kumbh items-center justify-center">
       {/* Year Range */}
-      <div className="w-[95%] flex items-end justify-end text-7xl font-bold h-[30%]">
+      <div className="w-[95%] flex items-end justify-end  md:text-7xl text-5xl font-bold h-[30%]">
         <p>{events[0].yearRange}</p>
       </div>
 
@@ -61,33 +61,32 @@ const Events2: React.FC = () => {
             );
           })}
         </div>
-        <div className="w-full flex flex-col md:flex-row justify-between md:gap-6 gap-2 items-center h-[65%]">
-
-          {visibleEvents.map((event) => (
-            <div
-              key={event.id}
-              className="w-[80%] md:w-full flex-1 flex items-center justify-center border rounded-xl md:h-[90%] relative overflow-hidden group"
-            >
-              {/* Background image */}
+        <div className="w-full flex md:flex-row flex-wrap justify-center md:justify-between items-center md:gap-6 gap-2 h-[70%] md:h-[65%]">
+            {visibleEvents.map((event) => (
               <div
-                className="absolute inset-0 transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0 "
-                style={{
-                  backgroundImage: `url(${event.image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
+                key={event.id}
+                className="w-[45%] md:w-1/4 flex items-center justify-center border rounded-xl h-[45%] md:aspect-auto md:h-[90%] relative overflow-hidden group"
+              >
+                {/* Background image */}
+                <div
+                  className="absolute inset-0 transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  style={{
+                    backgroundImage: `url(${event.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                ></div>
 
-              {/* Overlay with 60% opacity that fades out on hover */}
-              <div className="absolute inset-0 bg-black opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>
 
-              {/* Text that fades out on hover */}
-              <div className="relative z-10 flex items-center justify-center rounded-md w-full transition-opacity duration-300 group-hover:opacity-0">
-                <span className="text-3xl font-bold text-center">{event.description}</span>
+                {/* Text */}
+                <div className="relative z-10 flex items-center justify-center rounded-md w-full transition-opacity duration-300 group-hover:opacity-0">
+                  <span className="md:text-3xl text-xl font-bold text-center">{event.description}</span>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
         {/* Event Description & Buttons */}
         <div className="w-full flex justify-between items-center h-[10%]">
@@ -102,8 +101,8 @@ const Events2: React.FC = () => {
           </button>
 
           <div className="flex flex-col justify-center items-center">
-            <span className="text-4xl ">{currentEventGroup}</span>
-            <span className="text-lg text-gray-400 font-light">
+          <span className="md:text-4xl text-xl">{currentEventGroup}</span>
+          <span className="md:text-lg text-md text-gray-400 font-light">
               {visibleEvents.length > 0 ? visibleEvents[0].description : ""}
             </span>
           </div>

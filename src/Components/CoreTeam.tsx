@@ -23,7 +23,7 @@ const Slide = ({
 }) => {
   return (
     <div className={`relative h-full transition-all duration-500 ease-[cubic-bezier(0.33,1,0.68,1)]
-        ${isSelected ? "w-[45%] scale-105 z-10" : "w-[35%] scale-85 z-0"}`}
+        ${isSelected ? "md:w-[45%] w-[90%] scale-105 z-10" : "md:w-[35%] w-0 scale-85 z-0"}`}
     >
       <div
         className={`relative h-full rounded overflow-hidden cursor-pointer
@@ -116,7 +116,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
   return (
     <div className="text-white w-[100vw] h-[90vh] md:h-[95vh] flex flex-col pt-15 items-center">
       {/* Title */}
-      <div className="flex flex-row w-[85%] justify-between items-center text-[#D3D3D3] text-6xl mb-5 h-[15%]">
+      <div className="flex flex-row w-[85%] justify-between items-center text-[#D3D3D3] md:text-6xl text-4xl mb-5 h-[15%]">
         <span className='pr-4'>CORE </span>
         <span className='flex w-[90%] border-1 border-[#D3D3D3]'></span>
         <span className='pl-4'>DAS</span>
@@ -160,7 +160,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
       </div>
 
       {/* Info Section - no divider */}
-      <div className="w-[82%] mt-14 flex flex-col md:flex-row justify-between h-[60%] md:h-[12%] ">
+      <div className="w-[82%] mt-14 flex flex-col md:flex-row justify-between h-[30%] md:h-[12%] ">
         <div className="md:w-[20%] w-full">
           <h2 className="text-2xl text-white font-bold uppercase tracking-wider">
             {slides[current].name}
