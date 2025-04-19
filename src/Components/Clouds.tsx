@@ -18,24 +18,18 @@ const Clouds = () => {
 
     }, []);
 
-    const yPosition = `${(scrollPosition) * 200}%`;
+    const yTransform = `${(-scrollPosition) * 100}%`;
     return (
 
-        <div className="min-w-screen max-w-screen h-[20%] bg-[#0d0d0d] relative flex justfiy-between overflow-hidden z-10">
-            <div className='absolute bottom-0 left-0' style={{
-                transform: 'translateY(0.5%)',
-                bottom: yPosition,
-    
-                zoom: 2.1,
+        <div className="min-w-screen max-w-screen h-screen bg-[#0d0d0d] relative flex justfiy-between overflow-hidden z-10">
+            <div className='absolute left-0 flex md:-bottom-40 -bottom-10' style={{
+                transform: `translateY(${yTransform}) scale(1.2)`,
             }}>
                 <img src={clb} alt="" className='md:w-[80%]' />
             </div>
 
-            <div className='absolute right-0 bottom-0 flex justify-end' style={{
-                transform: 'translateY(1%)',
-                bottom: yPosition,
-                zoom: 1.2,
-
+            <div className='absolute right-0 flex justify-end md:-bottom-40 -bottom-20' style={{
+                transform: `translateY(${yTransform}) scale(1.3)`,
             }}>
                 <img src={crb} alt="" className='w-[80%]' />
             </div>

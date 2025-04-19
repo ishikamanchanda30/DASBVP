@@ -38,6 +38,7 @@ const NavbarMobile: React.FC = () => {
             <div
              className='fixed top-12 left-[10%] w-[80%] flex flex-col bg-[#0D0D0D]/95 backdrop-blur-lg  z-100 border border-t-0 border-neutral-700 rounded-xl'
              style={{display: nav? "" : 'none'}}
+             onClick={()=>setNav(false)}
             >
               <Link
                     to="/about-us"

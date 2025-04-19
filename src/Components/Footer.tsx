@@ -28,7 +28,7 @@ function Footer() {
           </div>
         </div>
         <div className='flex flex-col md:flex-row gap-2'>
-          <div className='flex flex-col md:flex-row justify-between gap-4 cursor-pointer text-center box-border'>
+          <div className='flex flex-row justify-between md:gap-4 gap-1 cursor-pointer text-center box-border'>
             <a href="/contact" className='md:border-r-2 border-white md:pr-4'>
               Contact Us
             </a>

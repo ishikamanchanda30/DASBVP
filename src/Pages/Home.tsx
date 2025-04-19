@@ -7,9 +7,9 @@ function Home() {
       tracking-tighter font-semibold flex justify-center
       items-center z-5 '>
           <span className='flex items-center justify-center h-full'>
-            <span className='lg:text-[27rem] translate-y-[-4%] md:text-[24rem] text-[16rem]'>D</span>
-            <span className='lg:text-[18rem] flex items-center md:text-[15rem] text-[10rem]'>A</span>
-            <span className='lg:text-[27rem] translate-y-[-3%] md:text-[24rem] text-[16rem]'>S</span>
+            <span className='lg:text-[27rem] translate-y-[-4%] md:text-[24rem] text-[14rem]'>D</span>
+            <span className='lg:text-[18rem] flex items-center md:text-[15rem] text-[8rem]'>A</span>
+            <span className='lg:text-[27rem] translate-y-[-3%] md:text-[24rem] text-[14rem]'>S</span>
           </span>
       </div>
       <div 
@@ -17,7 +17,7 @@ function Home() {
                   lg:text-[22rem] leading-[1.4]  font-semibold flex justify-center items-center 
                   bg-[#0D0D0D] text-white overflow-hidden
                   [box-shadow:inset_0_0_20px_5px_rgba(255,255,255,0.3)] z-6 md:text-[16rem]
-                  md:w-[46%] md:left-[29%] text-[10rem] w-[56%] left-[22%] h-[26%] top-[37%]'
+                  md:w-[46%] md:left-[29%] text-[10rem] w-[60%] left-[20%] h-[26%] top-[37%]'
       >
         <span className='rotate-5 translate-x-[-5%]'>DAS</span>
       </div>
@@ -26,7 +26,7 @@ function Home() {
                   lg:text-[13rem] leading-[1.4] tracking-tighter font-semibold flex justify-center items-center 
                   bg-[#0D0D0D] text-white overflow-hidden
                   [box-shadow:inset_0_0_20px_5px_rgba(255,255,255,0.3)] z-6 md:text-[10rem] md:w-[26%]
-                   md:left-[37%] text-[7rem] w-[34%] left-[33%] h-[16%] top-[42%]'
+                   md:left-[37%] text-[7rem] w-[40%] left-[30%] h-[16%] top-[42%]'
       >
         <span className='rotate-4 translate-x-[-2%]'>DAS</span>
       </div>
