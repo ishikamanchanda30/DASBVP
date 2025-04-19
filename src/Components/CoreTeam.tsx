@@ -23,7 +23,7 @@ const Slide = ({
 }) => {
   return (
     <div className={`relative h-full transition-all duration-500 ease-[cubic-bezier(0.33,1,0.68,1)]
-        ${isSelected ? "md:w-[45%] w-[90%] scale-105 z-10" : "md:w-[35%] w-0 scale-85 z-0"}`}
+        ${isSelected ? "md:w-[45%] w-[80%] scale-105 z-10" : "md:w-[35%] w-0 scale-85 z-0"}`}
     >
       <div
         className={`relative h-full rounded overflow-hidden cursor-pointer
@@ -126,7 +126,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
       <div className="relative w-[85%] h-[70%] flex items-center">
 
         <button
-          className="absolute left-[2%] z-20 p-2 text-white hover:scale-110 transition-transform"
+          className="absolute md:left-[2%] left-0 z-20 p-2 text-white hover:scale-110 transition-transform"
           onClick={(e) => {
             e.stopPropagation();
             goToPrev();
@@ -136,7 +136,7 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
         </button>
 
         <button
-          className="absolute right-[2%] z-20 p-2 text-white hover:scale-110 transition-transform"
+          className="absolute md:right-[2%] right-0 z-20 p-2 text-white hover:scale-110 transition-transform"
           onClick={(e) => {
             e.stopPropagation();
             goToNext();
