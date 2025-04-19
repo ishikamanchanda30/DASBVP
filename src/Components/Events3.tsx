@@ -61,11 +61,11 @@ const Events3: React.FC = () => {
                 );
               })}
             </div>
-            <div className="w-full flex md:flex-row flex-wrap justify-center md:justify-between items-center md:gap-6 gap-2 h-[70%] md:h-[65%]">
+            <div className="w-full flex md:flex-row flex-wrap justify-center md:justify-between items-center md:gap-4 gap-2 h-[70%] md:h-[65%]">
             {visibleEvents.map((event) => (
               <div
                 key={event.id}
-                className="w-[45%] md:w-1/5 flex items-center justify-center border rounded-xl h-[45%] md:aspect-auto md:h-[90%] relative overflow-hidden group"
+                className="w-[45%] md:w-[22.5%] flex items-center justify-center border rounded-xl h-[45%] md:aspect-auto md:h-[90%] relative overflow-hidden group"
               >
                 {/* Background image */}
                 <div
