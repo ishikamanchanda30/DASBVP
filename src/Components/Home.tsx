@@ -61,11 +61,11 @@ function Home() {
             <div className="hidden md:block absolute bottom-20 left-12 w-20 h-[2px] bg-white"></div>
             <div className="hidden md:block absolute bottom-20 left-12 w-[2px] h-2 bg-white"></div>
 
-            <div className="absolute top-20 left-12 max-w-sm text-m text-left leading-5">
+            <div className="absolute top-20 left-5 right-5  max-w-sm text-lg md:text-m text-left leading-5">
                 Welcome to the art society of BVCOE. We shoot, sketch, design, and create — one frame, one pixel, one idea at a time.
             </div>
 
-            <div className="absolute bottom-20 right-12 max-w-sm text-m text-right leading-5">
+            <div className="absolute bottom-20 right-5 max-w-sm text-lg md:text-m text-right leading-5">
                 We don’t just create visuals — we craft experiences.
                 Every frame is a story waiting to unfold.
             </div>

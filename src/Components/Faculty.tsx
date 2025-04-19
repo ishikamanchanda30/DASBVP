@@ -10,9 +10,8 @@ const Faculty: React.FC = () => {
     };
 
     return (
-        <div className="w-screen bg-[#0D0D0D] text-[#D9D9D9] ">
-
-            <div className="h-full mx-auto px-4 py-12 relative grid grid-cols-1 md:grid-cols-3">
+        <div className="min-w-screen bg-[#0D0D0D] text-[#D9D9D9] overflow-hidd">
+            <div className="h-full mx-auto px-4 py-12 grid grid-rows-1 md:grid-cols-3">
                 <div className=" flex flex-col p-5 justify-between ">
 
                     <div className="space-y-8">
@@ -20,12 +19,12 @@ const Faculty: React.FC = () => {
                             {facultyMembers[currentIndex].name}
                         </h1>
 
-                        <p className="text-neutral-300">
+                        <p className="text-neutral-300 text-sm">
                             {facultyMembers[currentIndex].description}
                         </p>
                     </div>
                     <div>
-                        <div className="flex gap-4 md:mt-8">
+                        <div className="flex gap-4 mt-3 md:mt-8">
                             <button
                                 onClick={handlePrevious}
                                 className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-neutral-700 transition-colors"
@@ -48,11 +47,10 @@ const Faculty: React.FC = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className='p-5 mt-10 md:mt-0 flex justify-center items-center'>
-                    <div className="flex items-center justify-center">
+                <div className='p-5 flex justify-center items-center'>
+                    <div className="flex items-center justify-center md:top-0 ">
                         {/*bacgroundimage*/}
-                        <div className="absolute -rotate-12 w-40 h-40 md:w-96 md:h-96">
+                        <div className="absolute -rotate-12 w-60 h-60 md:w-54 md:h-54 lg:w-80 lg:h-80">
                             <img
                                 src={facultyMembers[currentIndex].imageUrl}
                                 alt="Dr. Arvind Rehalia"
@@ -60,7 +58,7 @@ const Faculty: React.FC = () => {
                             />
                         </div>
                         {/*bacgroundimage*/}
-                        <div className="rotate-0 w-40 h-40 md:w-96 md:h-96">
+                        <div className="rotate-0 w-60 h-60 md:w-54 md:h-54 lg:w-80 lg:h-80">
                             <img
                                 src={facultyMembers[currentIndex].imageUrl}
                                 alt="Dr. Arvind Rehalia"
@@ -70,8 +68,8 @@ const Faculty: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="flex justify-center items-center md:justify-end md:place-items-end bottom-0 sm:mb-3 md:mb-0">
-                    <div className="text-6xl md:text-8xl font-[600] text-end text-white md:p-4">
+                <div className="flex justify-center items-center md:justify-end md:place-items-end bottom-0 sm:mb-3 overflow-wrap">
+                    <div className="text-6xl font-[600] text-end text-white md:p-4">
                         FACULTY<br />INCHARGE
                     </div>
                 </div>
