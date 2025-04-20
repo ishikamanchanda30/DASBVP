@@ -23,7 +23,7 @@ const Slide = ({
 }) => {
   return (
     <div className={`relative h-full transition-all duration-500 ease-[cubic-bezier(0.33,1,0.68,1)]
-        ${isSelected ? "md:w-[45%] w-[80%] scale-105 z-10" : "md:w-[35%] w-0 scale-85 z-0"}`}
+        ${isSelected ? "md:w-[45%] w-[75%] scale-105 z-10" : "md:w-[35%] w-0 scale-85 z-0"}`}
     >
       <div
         className={`relative h-full rounded overflow-hidden cursor-pointer
@@ -93,14 +93,24 @@ const Carousel = ({ slides }: { slides: SlideData[] }) => {
   }, [current, goToSlide, slides.length]);
 
   useEffect(() => {
-    autoPlayRef.current = window.setInterval(goToNext, 2000);
-
+    if (current >= slides.length - 1) return; // Don't set interval if already on last slide
+  
+    autoPlayRef.current = window.setInterval(() => {
+      setCurrent((prev) => {
+        if (prev >= slides.length - 1 ) {
+          clearInterval(autoPlayRef.current!);
+          return prev;
+        }
+        return prev + 1;
+      });
+    }, 2000);
+  
     return () => {
       if (autoPlayRef.current !== null) {
         clearInterval(autoPlayRef.current);
       }
     };
-  }, [goToNext]);
+  }, [slides.length]);
 
   const getVisibleSlides = () => {
     const prevIndex = (current - 1 + slides.length) % slides.length;

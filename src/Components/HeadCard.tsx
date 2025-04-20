@@ -4,7 +4,7 @@ const HeadCard = () => {
     return (
         <div className="flex flex-wrap justify-center md:justify-between items-center md:gap-x-10 gap-x-2 gap-y-10 md:w-4/5 h-[80%] w-5/6">
             {heads.map((head, index) => (
-                <div key={index} className="relative w-[45%] md:w-1/5 h-[45%] overflow-hidden rounded-xl">
+                <div key={index} className="relative w-[45%] md:w-1/5 md:h-[45%] h-[30%] overflow-hidden rounded-xl">
                     <img
                         src={head.image}
                         alt={head.name}

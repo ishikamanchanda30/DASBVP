@@ -8,7 +8,7 @@ const Team: React.FC = () => {
         <CoreTeam />
       </div>
 
-      <div className='min-w-screen bg-[#0d0d0d] md:h-[100vh] h-[200vh] '>
+      <div className='min-w-screen bg-[#0d0d0d] md:h-[100vh] h-[135vh] '>
         <Heads />
       </div>
     </div>

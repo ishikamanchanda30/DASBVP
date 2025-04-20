@@ -5,11 +5,11 @@ const FlagshipEvent: React.FC = () => {
   const date: String = "April'25"
   return (
     <div className='w-screen h-screen bg-[#0D0D0D] text-white font-kumbh flex flex-col justify-center items-center'>
-      <div className='h-[20%] mt-18 md:mt-0 md:h-[40%]  flex flex-col justify-start items-start w-[95%]'>
+      <div className='h-[17%] mt-18 md:mt-0 md:h-[40%] flex flex-col justify-start items-start w-[95%]'>
         <span className='text-5xl md:text-9xl font-bold'>SPECTACLE</span>
         <span className='text-4xl md:text-6xl font-semibold'>{date}</span>
       </div>
-      <div className="h-[80%] md:h-[40%] p-5 md:p-0 flex flex-col md:flex-row w-[95%] gap-8"> {/* Parent container */}
+      <div className="h-[83%] md:h-[40%] p-5 pb-7 md:p-0 flex flex-col md:flex-row w-[95%] gap-8"> {/* Parent container */}
         {events.map((event, index) => (
           <div
             key={index}
