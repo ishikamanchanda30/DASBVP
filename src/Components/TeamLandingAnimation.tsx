@@ -37,7 +37,7 @@ const TeamLandingAnimation: React.FC<TeamLandingAnimationProps> = ({ onFinish, o
       const timer = setTimeout(() => {
         setPhase("done");
         onFinish();
-      }, 2000); // Optional: close overlay after content loads
+      }, 1900); // Optional: close overlay after content loads
       return () => clearTimeout(timer);
     }
   }, [phase, onFinish, onShowNavbar]);
