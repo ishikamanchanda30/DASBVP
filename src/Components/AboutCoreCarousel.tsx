@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import coreTeam from '../data/Core';
 
 export default function AboutCoreCarousel() {
