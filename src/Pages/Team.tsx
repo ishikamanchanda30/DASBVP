@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import CoreTeam from "../Components/CoreTeam";
-import Heads from "../Components/Heads";
 import TeamLandingAnimation from "../Components/TeamLandingAnimation";
 
 const Team: React.FC = () => {
