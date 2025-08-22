@@ -16,9 +16,15 @@ const Team: React.FC = () => {
             <CoreTeam />
           </div>
 
+<<<<<<< HEAD
           <div className='min-w-screen bg-[#0d0d0d] md:h-[100vh] h-[135vh]'>
             <Heads />
           </div>
+=======
+          {/* <div className='min-w-screen bg-[#0d0d0d] md:h-[100vh] h-[135vh]'>
+            <Heads />
+          </div> */}
+>>>>>>> origin/main
         </div>
       )}
     </>

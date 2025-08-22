@@ -68,14 +68,12 @@ const Events2: React.FC = () => {
                 className="w-[45%] md:w-[22.5%] flex items-center justify-center border rounded-xl h-[45%] md:aspect-auto md:h-[90%] relative overflow-hidden group"
               >
                 {/* Background image */}
-                <div
-                  className="absolute inset-0 transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                  style={{
-                    backgroundImage: `url(${event.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                  }}
-                ></div>
+                <img
+                  src={event.image}
+                  alt={event.description}
+                  {...(currentPage === 0 ? {} : { loading: 'lazy' })}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                />
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>

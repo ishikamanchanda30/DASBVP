@@ -1,7 +1,7 @@
-import uday from "../assets/Core/uday.jpg"
-import vansh from "../assets/Core/vansh.jpg"
-import pranaya from "../assets/Core/pranaya.jpg"
-import raman from "../assets/Core/raman.jpg"
+import pratham from '../assets/Heads/pratham.jpg'
+import ishika from '../assets/Heads/ishika.jpg'
+import saanvi from '../assets/Heads/saanvi.jpg'
+import yash from '../assets/Heads/yash.jpg'
 
 interface CoreTeam {
     name: string,
@@ -11,28 +11,28 @@ interface CoreTeam {
 }
 const coreTeam: CoreTeam[] = [
     {
-        name: "Vansh Gupta",
-        image: vansh,
+        name: "Ishika Manchanda",
+        image: ishika,
         position: "President",
         desc: "Leading the vision of the Digital Arts Society and guiding the team toward creative excellence."
     }, 
     {
-        name: "Pranaya Bansal",
-        image: pranaya,
+        name: "Saanvi Karkra",
+        image: saanvi,
         position: "Vice President",
         desc: "Guiding our Creative Studio's vision while encouraging individual artistic development."
     },
     {
-        name: "Uday Singh Pundeer",
-        image:uday,
+        name: "Pratham Chhabra",
+        image: pratham,
         position: "General Secretary",
         desc: "Guiding our Creative Studio's vision while encouraging individual artistic development."
     },
     {
-        name: "Raman",
-        image: raman,
-        position: "Chapter Officer",
-        desc: "Guiding our Creative Studio's vision while encouraging individual artistic development."
+        name: "Yash Kaul",
+        image: yash,
+        position: "Treasurer",
+        desc: "Managing resources responsibly while supporting every initiative's success."
     }
 ]
 export default coreTeam;

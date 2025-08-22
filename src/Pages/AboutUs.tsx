@@ -6,8 +6,8 @@ import AboutCoreCarousel from '../Components/AboutCoreCarousel';
 const AboutUs: React.FC = () => {
   return (
     <div className='bg-[#0d0d0d]'>
-      <Home/>      
-      <AboutCoreCarousel />
+      <Home/>  
+      <AboutCoreCarousel/>    
       <Faculty/>
 
     </div>
