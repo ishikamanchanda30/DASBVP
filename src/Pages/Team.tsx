@@ -15,16 +15,6 @@ const Team: React.FC = () => {
           <div className='min-w-screen md:min-h-screen bg-[#0d0d0d]'>
             <CoreTeam />
           </div>
-
-<<<<<<< HEAD
-          <div className='min-w-screen bg-[#0d0d0d] md:h-[100vh] h-[135vh]'>
-            <Heads />
-          </div>
-=======
-          {/* <div className='min-w-screen bg-[#0d0d0d] md:h-[100vh] h-[135vh]'>
-            <Heads />
-          </div> */}
->>>>>>> origin/main
         </div>
       )}
     </>
