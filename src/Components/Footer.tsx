@@ -13,12 +13,8 @@ function Footer() {
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-xs">
           <div className="flex justify-center items-center gap-1">
-            <div className="opacity-50">DESIGNED BY:</div>
-            <div>TEENA KAINTURA</div>
-          </div>
-          <div className="flex justify-center items-center gap-1">
-            <div className="opacity-50">DEVELOPED BY:</div>
-            <div>HARSHIT BAREJA & ISHIKA MANCHANDA</div>
+            <div className="opacity-50">DESIGNED & DEVELOPED BY:</div>
+            <div>TEENA KAINTURA | HARSHIT BAREJA | ISHIKA MANCHANDA</div>
           </div>
         </div>
         <div className='flex flex-col md:flex-row gap-2'>
