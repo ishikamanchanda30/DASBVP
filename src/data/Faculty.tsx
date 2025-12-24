@@ -9,8 +9,8 @@ interface FacultyMember {
 
 const facultyMembers: FacultyMember[] = [
     {
-        name: "DR. ARVIND REHALIA",
-        description: "Dr. Arvind Rehalia is an educator and innovator with over 18 years of experience in teaching, research, and entrepreneurship. He’s currently an Associate Professor in IT at Bharati Vidyapeeth’s College of Engineering, New Delhi. ",
+        name: "MS. SHRISHTI",
+        description: "Ms. Shrishti is an educator and innovator with over 18 years of experience in teaching, research, and entrepreneurship. He’s currently an Associate Professor in IT at Bharati Vidyapeeth’s College of Engineering, New Delhi. ",
         role: "FACULTY",
         imageUrl: faculty
     },
